@@ -1,6 +1,6 @@
 <center>
 <body>
-  <h1>Création d'utilisateurs !</h1>
+  <h1 style="color:blue;">Création d'utilisateurs !</h1>
 
   <!-- ################### Création du formulaire en Form_tag ################### -->
   <form action="/" method="POST">
@@ -13,32 +13,24 @@
         <input type="text" class="form-control" name="username" placeholder="Your Username">
     </div>
 
-<!--       Username:<br>
-      <input type="text" name="username" placeholder="Ecrit ton username"><br><br> -->
 
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" name="email" class="form-control" placeholder="name@example.com">
     </div>
     
- <!--      Email:<br>
-      <input type="text" name="email" placeholder="Ecrit ton email"><br><br>
- -->
-
     <div class="form-group">
         <label for="text">Bio:</label>
         <input type="text" class="form-control form-control-lg" name="bio" placeholder="Your biography">
     </div>
 
-    <button type="button" class="btn btn-danger">Validez</button>
-
-    <!-- Bio:<br>
-    <textarea name="bio" cols="30" rows="10" placeholder="Ecrit ta bio"></textarea><br><br>
-    <button type="submit" class="btn btn-primary">Envoyer</button> -->
+    <button type="submit" class="btn btn-danger">Validez</button>
 
     </fieldset>
   </form>
 </center>
+
+<p><%= link_to "Pour revenir à l'accueil", home_path %></p>
 
   <!-- ################### Création du formulaire en Form_tag ################### -->
   <!-- <br><br><br><br> -->
@@ -56,14 +48,16 @@
 
   <%#= submit_tag "Envoyer", data: { confirm: "Es-tu sur ?" } %>
   <%# end %>
+  
   <%# end %>
 
 
   <!-- ################### Création du formulaire en Form_for ################### -->
+  
   <%#= form_for :user do |f| %>
-  <!-- Username : <br> <%#= f.text_field :username %><br /><br> -->
-  <!-- email : <br> <%#= f.text_field :email %><br /><br> -->
-  <!-- Biographie : <br> <%#= f.text_area :bio %><br /><br> -->
+  <!-- Username : <br> <%#= f.text_field :username %><br /><br>
+  email : <br> <%#= f.text_field :email %><br /><br>
+  Biographie : <br> <%#= f.text_area :bio %><br /><br> -->
   <%#= f.submit %>
   <%# end %>
   

@@ -5,6 +5,7 @@ class UserController < ApplicationController
 	def create
 
 ################# Pour les méthodes form_tag et form ###############
+	  
 	  @user = User.new('username' => params[:username],
 	                   'email' => params[:email],
 	                   'bio' => params[:bio])
@@ -16,16 +17,16 @@ class UserController < ApplicationController
       end
 
 ################# Activer cette méthode pour que la form_for fonctionne ###############
-   	  # @user = User.new
-	  # @user.username = params["user"]["username"]
-	  # @user.bio = params["user"]["bio"]
-	  # @user.email = params["user"]["email"]
+ #   	  @user = User.new
+	#   @user.username = params["user"]["username"]
+	#   @user.bio = params["user"]["bio"]
+	#   @user.email = params["user"]["email"]
 
-	  #   if @user.save
-	  #     redirect_to user_path(params["user"][:username])
-	  #   else
-	  #     render '/user/errorpage'
-	  #   end
+	#     if @user.save
+	#       redirect_to usering_path(params["user"][:username])
+	#     else
+	#       render '/user/errorpage'
+	#     end
 	  
 	end
 
