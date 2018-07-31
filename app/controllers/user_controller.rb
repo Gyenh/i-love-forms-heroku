@@ -10,7 +10,7 @@ class UserController < ApplicationController
 	                   'bio' => params[:bio])
 
 	  if @user.save
-	    redirect_to user_path(params[:username])
+	    redirect_to usering_path(params[:username])
 	  else
 	    render '/user/errorpage'
       end
