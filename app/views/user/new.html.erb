@@ -1,0 +1,42 @@
+<h1>Pour créer un nouveau utilisateur</h1>
+
+<p>Bienvenue dans la création d'utilisateurs !</p>
+
+
+<form action="/" method="POST">  
+<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+ <fieldset>
+ 	<legend>Informations personelles</legend>
+  Username:<br>
+  <input type="text" name="username"><br><br>
+  Email:<br>
+  <input type="text" name="email"><br><br>
+  Bio:<br>
+  <textarea name="bio" cols="30" rows="10"></textarea><br><br>
+  <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+
+<%#= form_tag('/') %>
+<%#= field_set_tag 'Informations personnelles' do %><!-- <br><br> -->
+
+<!-- Username :<br> -->
+<%#= text_field_tag 'username' %><!-- <br><br> -->
+<!-- Votre email :<br> -->
+<%#= email_field_tag 'email' %><!-- <br><br> -->
+<!-- Bio :<br> -->
+<%#= text_area_tag 'bio', nil, rows: 10, cols: 33 %><!-- <br><br> -->
+<%#= button_tag "Save", data: { confirm: "Confirmez-vous vos informations ?" } %>
+<%# end %>
+
+<%#= form_for :user do |f| %>
+  <!-- Username: <br />
+  <%#= f.text_field :username %><br />
+  Email: <br />
+  <%#= email_field("user", "address") %><br />
+  Biography : <br /> -->
+  <%#= f.text_area :bio %>
+ 
+  <%#= f.submit %>
+<%# end %>
