@@ -1,42 +1,48 @@
-<h1>Pour créer un nouveau utilisateur</h1>
+<body>
+<center>
+  <h1>Création d'utilisateurs !</h1>
 
-<p>Bienvenue dans la création d'utilisateurs !</p>
+  <!-- ################### Création du formulaire en Form_tag ################### -->
+  <form action="/" method="POST">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <fieldset>
+      <legend>Informations personelles</legend>
+      Username:<br>
+      <input type="text" name="username" placeholder="Ecrit ton username"><br><br>
+      Email:<br>
+      <input type="text" name="email" placeholder="Ecrit ton email"><br><br>
+      Bio:<br>
+      <textarea name="bio" cols="30" rows="10" placeholder="Ecrit ta bio"></textarea><br><br>
+      <button type="submit" class="btn btn-primary">Envoyer</button>
+    </fieldset>
+  </form>
+
+  <!-- ################### Création du formulaire en Form_tag ################### -->
+  <%#= form_tag url_for(action: 'create'), method: "post" do %>
+  <%#= field_set_tag 'Informations' do %>
+
+  <!-- <p>Entre ton username</p> -->
+  <%#= text_field_tag 'username' %><!-- <br><br> -->
+
+  <!-- <p>Entre ton email</p> -->
+  <%#=email_field_tag 'email'%><!-- <br><br> -->
+
+  <!-- <p>Complete ta bio</p> -->
+  <%#=text_area_tag 'bio' %><!-- <br><br> -->
+
+  <%#= submit_tag "Envoyer", data: { confirm: "Es-tu sur ?" } %>
+  <%# end %>
+  <%# end %>
 
 
-<form action="/" method="POST">  
-<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
- <fieldset>
- 	<legend>Informations personelles</legend>
-  Username:<br>
-  <input type="text" name="username"><br><br>
-  Email:<br>
-  <input type="text" name="email"><br><br>
-  Bio:<br>
-  <textarea name="bio" cols="30" rows="10"></textarea><br><br>
-  <input type="submit" value="Submit">
-  </fieldset>
-</form>
-
-
-<%#= form_tag('/') %>
-<%#= field_set_tag 'Informations personnelles' do %><!-- <br><br> -->
-
-<!-- Username :<br> -->
-<%#= text_field_tag 'username' %><!-- <br><br> -->
-<!-- Votre email :<br> -->
-<%#= email_field_tag 'email' %><!-- <br><br> -->
-<!-- Bio :<br> -->
-<%#= text_area_tag 'bio', nil, rows: 10, cols: 33 %><!-- <br><br> -->
-<%#= button_tag "Save", data: { confirm: "Confirmez-vous vos informations ?" } %>
-<%# end %>
-
-<%#= form_for :user do |f| %>
-  <!-- Username: <br />
-  <%#= f.text_field :username %><br />
-  Email: <br />
-  <%#= email_field("user", "address") %><br />
-  Biography : <br /> -->
-  <%#= f.text_area :bio %>
- 
+  <!-- ################### Création du formulaire en Form_for ################### -->
+  <!-- <%#= form_for :user do |f| %>
+  Username : <br> <%#= f.text_field :username %><br /><br>
+  email : <br> <%#= f.text_field :email %><br /><br>
+  Biographie : <br> <%#= f.text_area :bio %><br /><br>
   <%#= f.submit %>
-<%# end %>
+  <#% end %>
+   -->
+
+</center>
+</body>
