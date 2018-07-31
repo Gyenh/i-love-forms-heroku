@@ -1,3 +1,4 @@
+<center>
 <body>
   <h1>Création d'utilisateurs !</h1>
 
@@ -6,15 +7,38 @@
     <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
     <fieldset>
       <legend>Informations personelles</legend>
-      Username:<br>
-      <input type="text" name="username" placeholder="Ecrit ton username"><br><br>
-      Email:<br>
+    
+    <div class="form-group">
+        <label for="text">Username:</label>
+        <input type="text" class="form-control" name="username" placeholder="Your Username">
+    </div>
+
+<!--       Username:<br>
+      <input type="text" name="username" placeholder="Ecrit ton username"><br><br> -->
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" name="email" class="form-control" placeholder="name@example.com">
+    </div>
+    
+ <!--      Email:<br>
       <input type="text" name="email" placeholder="Ecrit ton email"><br><br>
-      Bio:<br>
-      <textarea name="bio" cols="30" rows="10" placeholder="Ecrit ta bio"></textarea><br><br>
-      <button type="submit" class="btn btn-primary">Envoyer</button>
+ -->
+
+    <div class="form-group">
+        <label for="text">Bio:</label>
+        <input type="text" class="form-control form-control-lg" name="bio" placeholder="Your biography">
+    </div>
+
+    <button type="button" class="btn btn-danger">Validez</button>
+
+    <!-- Bio:<br>
+    <textarea name="bio" cols="30" rows="10" placeholder="Ecrit ta bio"></textarea><br><br>
+    <button type="submit" class="btn btn-primary">Envoyer</button> -->
+
     </fieldset>
   </form>
+</center>
 
   <!-- ################### Création du formulaire en Form_tag ################### -->
   <!-- <br><br><br><br> -->
